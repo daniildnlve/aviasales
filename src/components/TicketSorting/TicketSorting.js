@@ -1,6 +1,5 @@
 import './TicketSorting.scss'
-import { useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setSort } from '../../store/sortSlice'
 
 const TicketSorting = () => {
