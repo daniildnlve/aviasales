@@ -28,7 +28,11 @@ const TicketList = () => {
     if (sort === 'cheap') {
       return clonedTickets.sort((a, b) => a.price - b.price)
     } else if (sort === 'fast') {
-      return clonedTickets.sort((a, b) => a.segments[0].duration - b.segments[0].duration)
+      return clonedTickets.sort((a, b) => {
+        const first = a.segments[0].duration + a.segments[1].duration
+        const second = b.segments[0].duration + b.segments[1].duration
+        return first - second
+      })
     }
   }
 
